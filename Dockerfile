@@ -20,4 +20,4 @@ ADD price_detect.py /
 ADD tele_bot.py /
 ADD price_database /
 ADD trip_list /
-CMD ["python", "main.py"]
+CMD ["python3", "main.py"]
