@@ -18,6 +18,15 @@ def get_price(depart_city, arrive_city, depart_date):
     chrome_options.add_experimental_option("excludeSwitches", ["enable-logging"])
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
+    chrome_options.add_argument('--disable-gpu')
+    chrome_options.add_argument('--disable-extensions')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    chrome_options.add_argument('--disable-setuid-sandbox')
+    chrome_options.add_argument('--no-first-run')
+    chrome_options.add_argument('--no-zygote')
+    chrome_options.add_argument('--single-process')
+    chrome_options.add_argument('--disable-features=VizDisplayCompositor')
+    
     driver = webdriver.Chrome(service_log_path='NULL', options=chrome_options)
 
     url = "https://www.southwest.com/air/booking/select.html?adultPassengersCount=1&adultsCount=1&clk=GSUBNAV-AIR-BOOK&departureDate="+depart_date+"&departureTimeOfDay=ALL_DAY&destinationAirportCode="+arrive_city+"&fareType=USD&originationAirportCode="+depart_city+"&passengerType=ADULT&returnDate=&returnTimeOfDay=ALL_DAY&tripType=oneway"
