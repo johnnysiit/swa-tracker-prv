@@ -18,6 +18,7 @@ RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/so
 RUN apt-get -y update
 RUN apt-get -y install google-chrome-stable
 
+ENV PATH "$PATH:/usr/local/bin/chromedriver"
 # install selenium
 RUN pip install selenium==3.8.0
 
