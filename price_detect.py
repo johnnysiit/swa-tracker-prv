@@ -10,10 +10,10 @@ def get_price(depart_city, arrive_city, depart_date):
     import datetime
 
     chrome_options = Options()
-    #chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--headless")
     chrome_options.add_argument('--disable-blink-features=AutomationControlled')
     chrome_options.add_argument("window-size=1000,600")
-    #chrome_options.add_argument("user-agent= chrome on mac os newest
+    #chrome_options.add_argument("user-agent= chrome on ubuntu
     chrome_options.add_argument("user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.5414.74 Safari/537.36")
     chrome_options.add_experimental_option("excludeSwitches", ["enable-logging"])
     chrome_options.add_argument('--no-sandbox')
