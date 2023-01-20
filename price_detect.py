@@ -13,19 +13,13 @@ def get_price(depart_city, arrive_city, depart_date):
     chrome_options.add_argument("--headless")
     chrome_options.add_argument('--disable-blink-features=AutomationControlled')
     chrome_options.add_argument("window-size=1000,600")
-    #chrome_options.add_argument("user-agent= chrome on ubuntu
-    chrome_options.add_argument("user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.5414.74 Safari/537.36")
+    #chrome_options.add_argument("user-agent= chrome
+    chrome_options.add_argument("user-agent= Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.3987.149 Safari/537.36")
+    #chrome_options.add_argument("user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.5414.74 Safari/537.36")
+
     chrome_options.add_experimental_option("excludeSwitches", ["enable-logging"])
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
-    chrome_options.add_argument('--disable-gpu')
-    chrome_options.add_argument('--disable-extensions')
-    chrome_options.add_argument('--disable-dev-shm-usage')
-    chrome_options.add_argument('--disable-setuid-sandbox')
-    chrome_options.add_argument('--no-first-run')
-    chrome_options.add_argument('--no-zygote')
-    chrome_options.add_argument('--single-process')
-    chrome_options.add_argument('--disable-features=VizDisplayCompositor')
     
     driver = webdriver.Chrome(service_log_path='NULL', options=chrome_options)
 
