@@ -122,10 +122,10 @@ def price_summary():
   print("Price Summary Ended at", now)
 
 
-while True:
-  now = datetime.datetime.now()
-  get_price()
-  price_compare()
-  if now.hour == 14:
-    price_summary()
-  time.sleep(3600)
+# while True:
+now = datetime.datetime.now()
+get_price()
+price_compare()
+if now.hour == 14:
+  price_summary()
+  # time.sleep(3600)
