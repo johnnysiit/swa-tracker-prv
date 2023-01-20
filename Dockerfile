@@ -1,21 +1,27 @@
 FROM python:3
 
-RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-RUN dpkg -i google-chrome-stable_current_amd64.deb
-RUN apt -f install -y
+RUN apt-get -y update
+RUN pip install --upgrade pip
+RUN apt-get install zip -y
+RUN apt-get install unzip -y
 
-# install chromedriver
-RUN apk-get install -yqq unzip
-RUN wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`/chromedriver_linux64.zip
-RUN unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
+RUN wget -N https://chromedriver.storage.googleapis.com/72.0.3626.69/chromedriver_linux64.zip -P ~/
+RUN unzip ~/chromedriver_linux64.zip -d ~/
+RUN rm ~/chromedriver_linux64.zip
+RUN mv -f ~/chromedriver /usr/local/bin/chromedriver
+RUN chown root:root /usr/local/bin/chromedriver
+RUN chmod 0755 /usr/local/bin/chromedriver
 
-# set display port to avoid crash
-ENV DISPLAY=:99
+# Install chrome broswer
+RUN curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
+RUN apt-get -y update
+RUN apt-get -y install google-chrome-stable
 
 # install selenium
 RUN pip install selenium==3.8.0
 
-RUN pip install requests pandas selenium
+RUN pip install requests pandas
 ADD main.py /app/main.py
 ADD price_detect.py /app/price_detect.py
 ADD tele_bot.py /app/tele_bot.py
