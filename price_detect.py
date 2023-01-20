@@ -26,7 +26,7 @@ def get_price(depart_city, arrive_city, depart_date):
     url = "https://www.southwest.com/air/booking/select.html?adultPassengersCount=1&adultsCount=1&clk=GSUBNAV-AIR-BOOK&departureDate="+depart_date+"&departureTimeOfDay=ALL_DAY&destinationAirportCode="+arrive_city+"&fareType=USD&originationAirportCode="+depart_city+"&passengerType=ADULT&returnDate=&returnTimeOfDay=ALL_DAY&tripType=oneway"
 
     driver.get(url)
-    driver.implicitly_wait(20)
+    driver.implicitly_wait(60)
     # try:
     #     driver.find_element(By.XPATH, "/html/body/div[3]/div/div/div/div[2]/div[2]/div/div[2]/div/div/section/div[2]/div[2]/div/form/div[2]/div[9]/button").click()
     #     driver.implicitly_wait(20)
