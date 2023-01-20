@@ -1,7 +1,7 @@
 FROM python:3
 
 RUN apt-get -y update
-RUN pip install --upgrade pip
+RUN pip3 install --upgrade pip
 RUN apt-get install zip -y
 RUN apt-get install unzip -y
 RUN wget -N https://chromedriver.storage.googleapis.com/109.0.5414.74/chromedriver_linux64.zip -P ~/
@@ -21,7 +21,7 @@ RUN apt-get -y install google-chrome-stable
 ENV PATH "$PATH:/usr/local/bin/"
 # install selenium
 
-RUN pip install requests pandas selenium
+RUN pip3 install requests pandas selenium
 ADD main.py /app/main.py
 ADD price_detect.py /app/price_detect.py
 ADD tele_bot.py /app/tele_bot.py
