@@ -18,11 +18,10 @@ RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/so
 RUN apt-get -y update
 RUN apt-get -y install google-chrome-stable
 
-ENV PATH "$PATH:/usr/local/bin/chromedriver"
+ENV PATH "$PATH:/usr/local/bin/"
 # install selenium
-RUN pip install selenium==3.8.0
 
-RUN pip install requests pandas
+RUN pip install requests pandas selenium
 ADD main.py /app/main.py
 ADD price_detect.py /app/price_detect.py
 ADD tele_bot.py /app/tele_bot.py
