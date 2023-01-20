@@ -10,7 +10,7 @@ def get_price(depart_city, arrive_city, depart_date):
     import datetime
 
     chrome_options = Options()
-    chrome_options.add_argument("--headless")
+    #chrome_options.add_argument("--headless")
     chrome_options.add_argument('--disable-blink-features=AutomationControlled')
     chrome_options.add_argument("window-size=1000,600")
     #chrome_options.add_argument("user-agent= chrome on mac os newest
