@@ -1,0 +1,140 @@
+[1683053301.754][INFO]: Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 51350
+[1683053301.754][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1683053302.257][INFO]: [90c5ec8e100870352854f160a64989e5] COMMAND InitSession {
+   "capabilities": {
+      "alwaysMatch": {
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--headless", "--disable-blink-features=AutomationControlled", "window-size=1000,600", "user-agent= Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.3987.149 Safari/537.36", "--no-sandbox", "--disable-dev-shm-usage" ],
+            "excludeSwitches": [ "enable-logging" ],
+            "extensions": [  ]
+         },
+         "pageLoadStrategy": "normal"
+      },
+      "firstMatch": [ {
+      } ]
+   }
+}
+[1683053302.261][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1683053302.261][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1683053302.262][INFO]: Launching chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --allow-pre-commit-input --disable-background-networking --disable-blink-features=AutomationControlled --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-blink-features=ShadowDOMV0 --headless --log-level=0 --no-first-run --no-sandbox --no-service-autorun --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-agent= Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.3987.149 Safari/537.36 --user-data-dir=/var/folders/lr/ch_ybvk94mg1ff8c6ctr901w0000gn/T/.com.google.Chrome.9IrEnl --window-size=1000,600 data:,
+[1683053302.451][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1683053302.622][INFO]: [90c5ec8e100870352854f160a64989e5] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": false,
+      "browserName": "chrome",
+      "browserVersion": "112.0.5615.137",
+      "chrome": {
+         "chromedriverVersion": "112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936})",
+         "userDataDir": "/var/folders/lr/ch_ybvk94mg1ff8c6ctr901w0000gn/T/.com.google.Chrome.9IrEnl"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:51355"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "mac os x",
+      "proxy": {
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:extension:credBlob": true,
+      "webauthn:extension:largeBlob": true,
+      "webauthn:extension:minPinLength": true,
+      "webauthn:extension:prf": true,
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "90c5ec8e100870352854f160a64989e5"
+}
+[1683053302.622][INFO]: [90c5ec8e100870352854f160a64989e5] COMMAND Navigate {
+   "url": "https://www.southwest.com/air/booking/select.html?int=HOMEQBOMAIR&adultPassengersCount=1&departureDate=2023-08-20&destinationAirportCode=MDW&fareType=USD&originationAirportCode=PHX&passengerType=ADULT&promoCode=&returnDate=&tripType=oneway&from=&to=&adultsCount=1&departureTimeOfDay=ALL_DAY&reset=true&returnTimeOfDay=ALL_DAY"
+}
+[1683053302.622][INFO]: Waiting for pending navigations...
+[1683053302.622][INFO]: Done waiting for pending navigations. Status: ok
+[1683053302.787][INFO]: Waiting for pending navigations...
+[1683053307.609][INFO]: Done waiting for pending navigations. Status: ok
+[1683053307.609][INFO]: [90c5ec8e100870352854f160a64989e5] RESPONSE Navigate
+[1683053307.610][INFO]: [90c5ec8e100870352854f160a64989e5] COMMAND SetTimeouts {
+   "implicit": 60000
+}
+[1683053307.610][INFO]: [90c5ec8e100870352854f160a64989e5] RESPONSE SetTimeouts
+[1683053307.610][INFO]: [90c5ec8e100870352854f160a64989e5] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id='air-booking-product-0']/div[4]/div/fieldset/label/button"
+}
+[1683053307.610][INFO]: Waiting for pending navigations...
+[1683053307.654][INFO]: Done waiting for pending navigations. Status: ok
+[1683053367.660][INFO]: Waiting for pending navigations...
+[1683053367.662][INFO]: Done waiting for pending navigations. Status: ok
+[1683053367.662][INFO]: [90c5ec8e100870352854f160a64989e5] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='air-booking-product-0']/div[4]/div/fieldset/label/button"}
+  (Session info: headless chrome=112.0.5615.137)
+[1683053367.664][INFO]: [90c5ec8e100870352854f160a64989e5] COMMAND QuitAll {
+}
+[1683053367.719][INFO]: [90c5ec8e100870352854f160a64989e5] RESPONSE QuitAll
