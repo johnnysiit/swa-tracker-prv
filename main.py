@@ -19,18 +19,18 @@ def get_price():
     depart_city = trip_info[0]
     arrive_city = trip_info[1]
     depart_date = trip_info[2]
-    try:
-      print("Scraping Started", depart_city, arrive_city, depart_date)
-      price_list = price_detect.get_price(depart_city, arrive_city,
-                                          depart_date)
-      #add the price_list to price database
-      price_database = open("price_database", "a")
-      for g in price_list:
-        price_database.write(g + "\n")
-      price_database.close()
-      print("Scraping Success", depart_city, arrive_city, depart_date)
-    except:
-      print("Error Scraping", depart_city, arrive_city, depart_date)
+    # try:
+    print("Scraping Started", depart_city, arrive_city, depart_date)
+    price_list = price_detect.get_price(depart_city, arrive_city,
+                                        depart_date)
+    #add the price_list to price database
+    price_database = open("price_database", "a")
+    for g in price_list:
+      price_database.write(g + "\n")
+    price_database.close()
+    print("Scraping Success", depart_city, arrive_city, depart_date)
+    # except:
+    #   print("Error Scraping", depart_city, arrive_city, depart_date)
 
 
 def price_compare():
@@ -121,11 +121,11 @@ def price_summary():
   now = datetime.datetime.now()
   print("Price Summary Ended at", now)
 
-
-while True:
+if __name__ == "__main__":
+  # while True:
   now = datetime.datetime.now()
   get_price()
   price_compare()
   if now.hour == 14:
     price_summary()
-  time.sleep(3600)
+    # time.sleep(3600)
