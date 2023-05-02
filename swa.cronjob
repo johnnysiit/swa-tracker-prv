@@ -1,2 +1,2 @@
-* * * * * cd /app && /usr/local/bin/python3 main.py >> /var/log/cron.log 2>&1
+0 * * * * cd /app && /usr/local/bin/python3 main.py >> /var/log/cron.log 2>&1
 #empty line 
