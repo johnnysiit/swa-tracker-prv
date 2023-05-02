@@ -10,7 +10,7 @@ def get_price(depart_city, arrive_city, depart_date):
     import datetime
 
     chrome_options = Options()
-    chrome_options.add_argument("--headless")
+    #chrome_options.add_argument("--headless")
     chrome_options.add_argument('--disable-blink-features=AutomationControlled')
     chrome_options.add_argument("window-size=1000,600")
     #chrome_options.add_argument("user-agent= chrome on mac os newest
@@ -19,8 +19,9 @@ def get_price(depart_city, arrive_city, depart_date):
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
     driver = webdriver.Chrome(service_log_path='NULL', options=chrome_options)
-
-    url = "https://www.southwest.com/air/booking/select.html?adultPassengersCount=1&adultsCount=1&clk=GSUBNAV-AIR-BOOK&departureDate="+depart_date+"&departureTimeOfDay=ALL_DAY&destinationAirportCode="+arrive_city+"&fareType=USD&originationAirportCode="+depart_city+"&passengerType=ADULT&returnDate=&returnTimeOfDay=ALL_DAY&tripType=oneway"
+    #original url: https://www.southwest.com/air/booking/select.html?int=HOMEQBOMAIR&adultPassengersCount=1&departureDate=2023-06-21&destinationAirportCode=MDW&fareType=USD&originationAirportCode=DSM&passengerType=ADULT&promoCode=&returnDate=&tripType=oneway&from=&to=&adultsCount=1&departureTimeOfDay=ALL_DAY&reset=true&returnTimeOfDay=ALL_DAY
+    url = "https://www.southwest.com/air/booking/select.html?int=HOMEQBOMAIR&adultPassengersCount=1&departureDate="+depart_date+"&destinationAirportCode="+arrive_city+"&fareType=USD&originationAirportCode="+depart_city+"&passengerType=ADULT&promoCode=&returnDate=&tripType=oneway&from=&to=&adultsCount=1&departureTimeOfDay=ALL_DAY&reset=true&returnTimeOfDay=ALL_DAY"
+    #url = "https://www.southwest.com/air/booking/select.html?adultPassengersCount=1&adultsCount=1&clk=GSUBNAV-AIR-BOOK&departureDate="+depart_date+"&departureTimeOfDay=ALL_DAY&destinationAirportCode="+arrive_city+"&fareType=USD&originationAirportCode="+depart_city+"&passengerType=ADULT&returnDate=&returnTimeOfDay=ALL_DAY&tripType=oneway"
 
     driver.get(url)
     driver.implicitly_wait(20)
